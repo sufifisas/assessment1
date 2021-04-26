@@ -56,7 +56,7 @@ export default function Section3() {
                     </div>
                 </div>
             <div className="container pt-60 text-center pb-70">
-                <Bracket>
+                <Bracket show="border-none" show1="border-none">
                     <h2 className="mx-20 my-20 text-grey-400 text-2xl lg:text-3xl font-sans-bold">our powerful <span className="text-green">skills</span></h2>
                 </Bracket>
                 <p className="text-lg text-black-600 mb-50 md:leading-base">We’re good and experienced at different things and areas and we promise about qulity of our works</p>

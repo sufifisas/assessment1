@@ -114,4 +114,10 @@
     .stack-4 {
       @apply absolute left-120
     }
+    .gradient {
+      border-image: linear-gradient(45deg, #e4e4e4, #f9f9f9) 1;
+    }
+    .gradient-left {
+      border-image: linear-gradient(45deg, #f9f9f9, #e4e4e4) 1;
+    }
   }

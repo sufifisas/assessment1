@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Section7() {
-    const list = ['home','portfolio','blog','1','1','2','2','1'];
+    const list = [1,2,3,4,5];
     const items = list.map((list,i) =>
         <span key={i}>
         <p className="btn bg-grey-400 text-green inline-flex">alexis simpson &nbsp;<span className="italic font-sans text-sm text-grey-900 capitalize">- CEO & Developer</span></p>
@@ -52,9 +52,6 @@ export default function Section7() {
                     arrows={false}  
                     renderButtonGroupOutside={true}
                     customButtonGroup={<CustomButtonGroupAsArrows />}
-                    containerClass=""
-                    itemClass=""
-                    sliderClass=""
                     autoPlay={true}
                     autoPlaySpeed={5000}
                     infinite={true}

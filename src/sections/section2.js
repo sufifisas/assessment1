@@ -19,13 +19,13 @@ export default function Section2() {
             </div>
             <h3 className="uppercase font-sans-bold text-black-600 mb-15 leading-base">{list.title}</h3>
             <p className="text-black-500 text-base inline-block mb-20">{list.content}</p>
-            <a href='#' className="item2 p-10 border border-grey-600 font-sans-bold uppercase text-xs text-black-400 rounded-md hover:bg-green hover:text-grey-500">read more</a>
+            <button className="item2 p-10 border border-grey-600 font-sans-bold uppercase text-xs text-black-400 rounded-md hover:bg-green hover:text-grey-500">read more</button>
         </li>
     );
     return(
         <section>
             <div className="pt-60 text-center container pb-120">
-                <Bracket>
+                <Bracket show="gradient-left" show1="gradient">
                     <h2 className="mx-20 my-20 text-black-900 text-2xl lg:text-3xl font-sans-bold">
                         what we <span className="text-green">offer</span>
                     </h2>

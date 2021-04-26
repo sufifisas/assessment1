@@ -9,7 +9,7 @@ export default function Section8() {
     const list = [Scent,Vivid,Hobnob,Burnabox];
     const items = list.map((list,i) =>
         <div key={i} className="w-full md:w-270 h-160 opacity-30 bg-black-800 rounded-md inline-flex justify-center items-center hover:opacity-100 cursor-pointer">
-            <img src={list}/>
+            <img src={list} alt={`logo-${i}`}/>
         </div>
     );
     const responsive = {
@@ -46,13 +46,7 @@ export default function Section8() {
       
     return(
         <section className="bg-black-900">
-            {/* <div className="container-c mx-auto py-50 relative flex items-center">
-            <button className="font-icons w-30 h-30 bg-grey-400 rounded-md text-green text-2.5xl leading-base mr-5 absolute -left-60 ">&#x44;</button>
-                <ul className="flex ">
-                    {items}   
-                </ul>
-                <button className="font-icons w-30 h-30  rounded-md bg-green text-grey-400 text-2.5xl leading-base mr-5 absolute -right-60 ">&#x45;</button>
-            </div> */}
+
             <div className="relative container py-50">
             <Carousel
             ssr

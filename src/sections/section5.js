@@ -50,7 +50,7 @@ export default function Section5() {
                 <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-x-40 lg:gap-x-30">
                     {items}
                 </ul>
-                <a href="#"><p className="btn mt-50 w-full bg-green text-grey-400">view all works</p></a>
+                <button><p className="btn mt-50 w-full bg-green text-grey-400">view all works</p></button>
             </div>
         </section>
     )
