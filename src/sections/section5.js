@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 export default function Section5() {
     
-    const details = [<span>&#xe093;</span>,<span>&#xe094;</span>,<span>&#xe096;</span>,<span>&#xe09c;</span>,<span>&#xe09b;</span>]
+    const details = [{icon:<span>&#xe093;</span>, stack:'stack-0'},{icon:<span>&#xe094;</span>, stack:'stack-1'},{icon:<span>&#xe096;</span>,stack:'stack-2'},{icon:<span>&#xe09c;</span>, stack:'stack-3'},{icon:<span>&#xe09b;</span>, stack:'stack-4'}]
     const list = 
     [{name:'alexis simpson',pos:'CEO & Developer',email:'a.simpson@unique.com',contact:'+1 911 (77) 222-1111'},
     {name:'steven cole',pos:'User Interface Designer',email:'s.cole@unique.com',contact:'+1 911 (77) 222-1111'},
@@ -16,13 +16,13 @@ export default function Section5() {
             <div className="person">
                 <div className=" h-160 lg:h-200 xl:h-270 flex justify-center items-center relative w-full rounded-md rounded-b-none bg-black-400 link">
                     <div className="relative h-40 w-160" >
-                        {details.map((detail,j)=>
-                            <div className={`stack stack-${j}`} key={j}>
-                                <p onMouseEnter={ (e)=>setHover(i + 'and' +  j) } onMouseLeave={ (e)=>setHover('') } className="text-lg cursor-pointer hover:text-grey-400 text-green absolute inset-0 m-auto font-bold font-icons flex justify-center items-center z-10 transition-all duration-300 ease-in-out"> 
-                                    {detail}
+                        {details.map((detail)=>
+                            <div className={detail.stack} key={detail.stack}>
+                                <p onMouseEnter={ (e)=>setHover(i + 'and' +  detail.stack ) } onMouseLeave={ (e)=>setHover('') } className="text-lg cursor-pointer hover:text-grey-400 text-green absolute inset-0 m-auto font-bold font-icons flex justify-center items-center z-10 transition-all duration-300 ease-in-out"> 
+                                    {detail.icon}
                                 </p>
                                 <svg className='relative' xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 53.281 53.28">
-                                    <path className="transition-all duration-300 ease-in-out" fill={`${hover === i + 'and' +  j ? '#383838' : '#e4e4e4' } `} d="M960.828,1384.54l22.628,22.63a4,4,0,0,1,0,5.66l-22.628,22.62a3.986,3.986,0,0,1-5.657,0l-22.627-22.62a4,4,0,0,1,0-5.66l22.627-22.63A4,4,0,0,1,960.828,1384.54Z" transform="translate(-931.375 -1383.38)"/>
+                                    <path className="transition-all duration-300 ease-in-out" fill={`${hover === i + 'and' +  detail.stack ? '#383838' : '#e4e4e4' } `} d="M960.828,1384.54l22.628,22.63a4,4,0,0,1,0,5.66l-22.628,22.62a3.986,3.986,0,0,1-5.657,0l-22.627-22.62a4,4,0,0,1,0-5.66l22.627-22.63A4,4,0,0,1,960.828,1384.54Z" transform="translate(-931.375 -1383.38)"/>
                                 </svg>
                             </div>
                         )}
