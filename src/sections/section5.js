@@ -17,7 +17,7 @@ export default function Section5() {
                 <div className=" h-160 lg:h-200 xl:h-270 flex justify-center items-center relative w-full rounded-md rounded-b-none bg-black-400 link">
                     <div className="relative h-40 w-160" >
                         {details.map((detail,j)=>
-                            <div className={`lg:hidden stack stack-${j}`} key={j}>
+                            <div className={`stack stack-${j}`} key={j}>
                                 <p onMouseEnter={ (e)=>setHover(i + 'and' +  j) } onMouseLeave={ (e)=>setHover('') } className="text-lg cursor-pointer hover:text-grey-400 text-green absolute inset-0 m-auto font-bold font-icons flex justify-center items-center z-10 transition-all duration-300 ease-in-out"> 
                                     {detail}
                                 </p>
