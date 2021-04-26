@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@layer base { 
+    @font-face {
+      font-family: Raleway-ExtraBold;
+      src: url(fonts/Raleway/raleway.extrabold.ttf) format("truetype");
+      line-height: 0.75
+    }
+    @font-face {
+        font-family: Raleway-Medium;
+        src: url(fonts/Raleway/raleway.medium.ttf) format("truetype");
+      }
+    @font-face {
+        font-family: ElegantIcons;
+        src: url(fonts/elegant_font/elegant_font/HTML CSS/fonts/ElegantIcons.ttf) format("truetype")
+    }
+    @font-face {
+      font-family: MyriadPro;
+      src: url(fonts/MyriadPro/MYRIADPRO-REGULAR.OTF) format("truetype");
+    }
+    @font-face {
+      font-family: Avenir;
+      src: url(fonts/Avenir/AvenirNextLTPro-Regular.otf) format("truetype");
+    }
+    
+  }
+
+  @layer components {
+    .diamond-sm {
+      @apply rounded-sm transform rotate-45 inline-block;
+      width: 7px;
+      height: 7px;
+    }
+    .diamond {
+      @apply rounded-sm transform rotate-45 inline-block;
+      width: 9px;
+      height: 9px;
+    }
+    .diamond-md {
+      @apply rounded-sm transform rotate-45 inline-block;
+      width: 11px;
+      height: 11px;
+    }
+    .diamond-lg {
+      @apply rounded-md transform rotate-45 inline-block;
+      width: 38px;
+      height: 38px;
+    }
+    .bg-home {
+      background-image: url(images/blurry.jpg);
+      background-repeat: no-repeat;
+      background-size: cover
+    }
+    .btn {
+      @apply h-40 rounded-md uppercase text-tiny font-sans-bold inline-flex justify-center items-center leading-fit px-15
+    }
+    .input {
+      @apply p-15 lg:p-20 border rounded-md border-grey-600 text-sm text-grey-900 italic w-full 
+    }
+    .quote {
+      line-height: 14px;
+    }
+    .quote::before {
+      content: "“";
+      font-family: Raleway-Medium;
+      font-size: 60px;
+      position: relative;
+      left: -5px;
+      top: 32px;
+      line-height: 0
+    }
+    .quote::after {
+      content: "”";
+      font-family: Raleway-Medium;
+      font-size: 60px;
+      position: relative;
+      right: -5px;
+      bottom: -32px;
+      line-height: 0
+    }
+
+    .item:hover .item1 {
+      @apply bg-green transition-all duration-300 ease-in-out
+    }
+    .item:hover .item2 {
+      @apply text-grey-500 bg-green border-green transition-all duration-300 ease-in-out
+    }
+    .person:hover .link {
+      @apply bg-green transition-all duration-500 ease-in-out
+    }
+    .person:hover .link div div {
+      @apply block
+    }
+    .person:hover .name {
+      @apply bg-black-900 transition-all duration-300 ease-in-out
+    }
+    .person:hover .email {
+      @apply text-green transition-all duration-300 ease-in-out
+    }
+    .stack-0 {
+      @apply absolute left-0
+    }
+    .stack-1 {
+      @apply absolute left-30
+    }
+    .stack-2 {
+      @apply absolute left-60
+    }
+    .stack-3 {
+      @apply absolute left-90
+    }
+    .stack-4 {
+      @apply absolute left-120
+    }
+  }
