@@ -60,7 +60,7 @@ export default function Section3() {
                     <h2 className="mx-20 my-20 text-grey-400 text-2xl lg:text-3xl font-sans-bold">our powerful <span className="text-green">skills</span></h2>
                 </Bracket>
                 <p className="text-lg text-black-600 mb-50 md:leading-base">We’re good and experienced at different things and areas and we promise about qulity of our works</p>
-                <ul className="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-40 md:gap-x-60 lg:flex justify-between px-15 md:px-0">
+                <ul className="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-40 md:gap-x-60 lg:gap-0 lg:flex justify-between px-15 md:px-0">
                     {items}
                 </ul>
             </div>
