@@ -20,7 +20,7 @@ export default function Section6() {
             .then(response => {
                 console.log(response);
                 setLoading(false)
-                alert(response.data.success)
+                alert(response.data.Success)
             })
             .catch(error => {
                 console.log(error)
